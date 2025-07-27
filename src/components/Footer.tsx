@@ -1,6 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Sprout, Mail, Phone, MapPin, Twitter, Youtube, Linkedin, Instagram, Facebook } from "lucide-react";
+import {
+  Mail, Phone, MapPin,
+  Twitter, Instagram, Facebook
+} from "lucide-react";
+import cropxonLogo from "@/assets/cropxon-logo-1.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const quickLinks = [
@@ -10,7 +15,7 @@ const Footer = () => {
     { label: "Roadmap", href: "#roadmap" },
     { label: "Blog", href: "#blog" },
     { label: "Contact", href: "#contact" },
-    { label: "Locate Us", href: "/locate-us" },
+    { label: "Locate Us", href: "/LocateUs" },
     { label: "Partner with Us", href: "#partner" },
     { label: "Ride with CropXon (Pilot) for Q-Commerce", href: "#pilot-qcommerce" }
   ];
@@ -39,7 +44,7 @@ const Footer = () => {
             <div className="lg:col-span-2 space-y-6">
               <div className="flex items-center space-x-2">
                 <img 
-                  src="/lovable-uploads/7d0e4ee6-870e-4650-81da-7c2d00dabd81.png" 
+                  src={cropxonLogo} 
                   alt="CropXon Logo" 
                   className="w-10 h-10 rounded-lg object-cover"
                 />
@@ -55,11 +60,11 @@ const Footer = () => {
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 text-accent" />
-                  <span className="text-primary-foreground/80">contact@cropxon.com</span>
+                  <span className="text-primary-foreground/80">hello@cropxon.com</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Phone className="w-5 h-5 text-accent" />
-                  <span className="text-primary-foreground/80">+91 98765 43210</span>
+                  <span className="text-primary-foreground/80">+91 8917549065</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <MapPin className="w-5 h-5 text-accent" />
@@ -74,12 +79,21 @@ const Footer = () => {
               <ul className="space-y-3">
                 {quickLinks.map((link) => (
                   <li key={link.label}>
-                    <a 
-                      href={link.href}
-                      className="text-primary-foreground/80 hover:text-accent transition-colors"
-                    >
-                      {link.label}
-                    </a>
+                    {link.href.startsWith("/") ? (
+                      <Link
+                        to={link.href}
+                        className="text-primary-foreground/80 hover:text-accent transition-colors"
+                      >
+                        {link.label}
+                      </Link>
+                    ) : (
+                      <a
+                        href={link.href}
+                        className="text-primary-foreground/80 hover:text-accent transition-colors"
+                      >
+                        {link.label}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -149,7 +163,7 @@ const Footer = () => {
         <div className="py-6 border-t border-primary-foreground/20">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-primary-foreground/80 text-sm">
-              © 2024 CropXon. All rights reserved. Building the future of agriculture.
+              © 2025 CropXon. All rights reserved. Building the future of agriculture.
             </p>
             
             {/* Social Links */}

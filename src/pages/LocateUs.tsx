@@ -2,6 +2,8 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { MapPin, Users, Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import indianExpansion from "@/assets/Cropxon-expansion1.png";
+import globalExpansion from "@/assets/CropXon-Expansion3.png";
 
 const LocateUs = () => {
   return (
@@ -35,7 +37,7 @@ const LocateUs = () => {
 
             <div className="relative max-w-5xl mx-auto">
               <img 
-                src="/lovable-uploads/f71329bb-d2e8-40da-bc08-d260c590ec02.png"
+                src={indianExpansion}
                 alt="CropXon India Expansion Plan"
                 className="w-full h-auto rounded-2xl shadow-2xl"
               />
@@ -55,7 +57,7 @@ const LocateUs = () => {
 
             <div className="relative max-w-5xl mx-auto">
               <img 
-                src="/lovable-uploads/45f0cc5a-9b63-4376-bac7-ac7459c727df.png"
+                src={globalExpansion}
                 alt="CropXon Global Vision"
                 className="w-full h-auto rounded-2xl shadow-2xl"
               />
@@ -121,6 +123,7 @@ const LocateUs = () => {
                   <MapPin className="w-5 h-5 mr-2" />
                   Visit Our Office
                 </Button>
+                <div></div>
               </div>
             </div>
           </div>

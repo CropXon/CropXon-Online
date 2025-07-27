@@ -19,7 +19,7 @@ const TrustedBy = () => {
           </p>
         </div>
 
-        <div className="flex justify-center">
+        {/* <div className="flex justify-center">
           <Card className="bg-background border-2 hover:shadow-lg transition-all duration-300 max-w-md">
             <CardContent className="p-8 text-center">
               <div className="w-20 h-20 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
@@ -36,7 +36,7 @@ const TrustedBy = () => {
               </p>
             </CardContent>
           </Card>
-        </div>
+        </div> */}
       </div>
     </section>
   );
